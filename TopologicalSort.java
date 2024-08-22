@@ -3,8 +3,8 @@ class TopologicalSort{
     public static void dfs(int node, int[] vis, ArrayList<ArrayList<Integer>> adj, Stack<Integer> st){
         vis[node] = 1;
         for(int it : adj.get(node)){
-            if(vis[node] == 0){
-                dfs(node, vis, adj, st);
+            if(vis[it] == 0){
+                dfs(it, vis, adj, st);
             }
         }
         st.push(node);
